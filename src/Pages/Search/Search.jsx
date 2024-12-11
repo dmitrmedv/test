@@ -1,5 +1,11 @@
+import AddForm from "../../Components/Forms/AddForm/AddForm";
+
 const Search = () => {
-  return <div>Search</div>;
+  return (
+    <>
+      <AddForm />
+    </>
+  );
 };
 
 export default Search;
