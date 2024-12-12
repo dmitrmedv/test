@@ -4,18 +4,16 @@ import LayOut from "./Pages/LayOut/LayOut";
 import Home from "./Pages/Home/Home";
 import Counter from "./Components/Counter/Counter";
 import Search from "./Pages/Search/Search";
-// import { slice } from "./redux/todo/todoSlice";
-// import { useDispatch } from "react-redux";
-// import { useEffect } from "react";
-// import { selectedToDo } from "./redux/todo/selectors";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+
+import { fetchAll } from "./redux/todo/operations";
 
 function App() {
-  // console.log(slice);
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(selectedToDo);
-  // });
-
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchAll());
+  }, [dispatch]);
   return (
     <>
       <Routes>

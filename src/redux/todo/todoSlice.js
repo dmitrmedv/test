@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAll } from "./operations";
+import { fetchAll, addTodo, removeTodo } from "./operations";
 
 const initialState = {
   todos: [],
@@ -14,8 +14,11 @@ export const slice = createSlice({
       .addCase(fetchAll.fulfilled, (state, actions) => {
         state.todos = actions.payload;
       })
-      .addCase(fetchAll.rejected, (state) => {
-        state.todos = "";
+      .addCase(addTodo.fulfilled, (state, actions) => {
+        state.todos.push(actions.payload);
+      })
+      .addCase(removeTodo.fulfilled, (state, actions) => {
+        state.todos = state.todos.filter(({ id }) => id !== actions.payload.id);
       }),
 });
 
