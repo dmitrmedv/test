@@ -1,28 +1,36 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import LayOut from "./Pages/LayOut/LayOut";
-import Home from "./Pages/Home/Home";
-import Counter from "./Components/Counter/Counter";
-import Search from "./Pages/Search/Search";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-
-import { fetchAll } from "./redux/todo/operations";
+import Modal from "./Components/Modal/Modal";
+import SettingModal from "./Components/SettingModal/SettingModal";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleModal } from "./redux/modalSlice";
+import LogOutModal from "./Components/LogOutModal/LogOutModal";
+import { useState } from "react";
 
 function App() {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchAll());
-  }, [dispatch]);
+  const isOpen = useSelector((state) => state.modals.isOpen);
+
+  const [position, setPosition] = useState(null);
+
   return (
     <>
-      <Routes>
-        <Route path="/" element={<LayOut />}>
-          <Route index element={<Home />} />
-          <Route path="counter" element={<Counter />} />
-          <Route path="search" element={<Search />} />
-        </Route>
-      </Routes>
+      <button
+        type="button"
+        onClick={() => dispatch(toggleModal("settings"), setPosition("top"))}
+      >
+        Open Setting Modal
+      </button>
+      <button
+        type="button"
+        onClick={() => dispatch(toggleModal("logout"), setPosition(null))}
+      >
+        Open LogOut Modal
+      </button>
+      {isOpen && (
+        <Modal toggleModal={() => dispatch(toggleModal())} position={position}>
+          {isOpen === "settings" && <SettingModal />}
+          {isOpen === "logout" && <LogOutModal />}
+        </Modal>
+      )}
     </>
   );
 }

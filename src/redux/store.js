@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { counterReducer } from "./counter/counterSlice";
-import { toDoSReducer } from "./todo/todoSlice";
+import filterReducer from "./filterSlice";
+import modalReducer from "./modalSlice";
 
 export const store = configureStore({
-  reducer: { counter: counterReducer, todo: toDoSReducer },
+  reducer: {
+    filters: filterReducer,
+    modals: modalReducer,
+  },
 });

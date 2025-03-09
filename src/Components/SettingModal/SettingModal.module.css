@@ -1,0 +1,251 @@
+.modalBoby {
+  overflow: hidden;
+  width: 80vw;
+  padding: 40px 7px 40px 20px;
+  box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
+  @media screen and (min-width: 375px) {
+    width: 303px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 40px 16px 40px 40px;
+    width: 568px;
+  }
+  @media screen and (min-width: 1400px) {
+    width: 840px;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #323f47;
+  margin-bottom: 20px;
+}
+
+.avatarBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.avatarWrapper {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatarWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uploadBtn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.01em;
+  color: #2f2f2f;
+  width: 133px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.infoBlock {
+  /* outline: 1px solid rgb(62, 104, 243); */
+  overflow-y: auto;
+  height: 100vh;
+  padding-right: 7px;
+  @media screen and (min-width: 768px) {
+    padding-right: 16px;
+  }
+}
+
+.infoBlock::-webkit-scrollbar {
+  width: 6px;
+  @media screen and (min-width: 768px) {
+    width: 8px;
+  }
+}
+
+.infoBlock::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background-color: #f0eff4;
+}
+
+.formTitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #323f47;
+  margin-bottom: 14px;
+}
+
+.genderBlock {
+  margin-bottom: 24px;
+}
+
+.genderBlock label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.01em;
+  color: #2f2f2f;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  gap: 8px;
+}
+
+.radioBtns {
+  display: flex;
+  gap: 20px;
+}
+
+.radioBtns input {
+  position: absolute;
+  opacity: 0;
+}
+
+.customRadio {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #9be1a0;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.customRadio::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.radioBtns input:checked + .customRadio::before {
+  background-color: #9be1a0;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.nameBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.nameField {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameBlock input {
+  border: 1px solid rgba(47, 47, 47, 0.15);
+  border-radius: 15px;
+  padding: 14px 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.01em;
+  color: #2f2f2f;
+}
+
+.nameBlock label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #323f47;
+  margin-bottom: 8px;
+}
+
+.normaBlock {
+  display: flex;
+  flex-direction: column;
+  /* gap: 12px; */
+}
+
+.normaTitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.01em;
+  color: #2f2f2f;
+  margin-bottom: 4px;
+}
+
+.formulaBlock {
+  margin-bottom: 12px;
+}
+
+.formula {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.01em;
+  color: #9be1a0;
+}
+
+.formulaInfo {
+  border: 1px solid rgba(47, 47, 47, 0.15);
+  border-radius: 15px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+.text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.01em;
+  color: rgba(47, 47, 47, 0.6);
+}
+
+.asterisk {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.01em;
+  color: #9be1a0;
+}
