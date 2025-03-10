@@ -1,6 +1,13 @@
 .modalBoby {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   overflow: hidden;
-  /* width: 100vw; */
   padding: 40px 7px 40px 20px;
   box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
   @media screen and (min-width: 375px) {
@@ -15,30 +22,42 @@
   }
 }
 
+.modalBoby input {
+  border: 1px solid rgba(47, 47, 47, 0.15);
+  border-radius: 15px;
+  padding: 14px 16px 14px 16px;
+  /* width: 100%; */
+}
+
 p {
   margin: 0;
   padding: 0;
 }
 
-.title {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
+.avatarBlock .title {
+  margin-bottom: 20px;
   font-size: 20px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 16px;
   line-height: 1.2;
   letter-spacing: -0.01em;
   color: #323f47;
-  margin-bottom: 20px;
 }
 
 .avatarBlock {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 40px;
+  outline: 1px solid black;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* gap: 10px; */
+  /* margin-bottom: 40px; */
 }
 
 .avatarWrapper {
+  margin: 0 auto 10px auto;
   width: 75px;
   height: 75px;
   border-radius: 50%;
@@ -52,6 +71,7 @@ p {
 }
 
 .uploadBtn {
+  margin: 0 auto;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -72,10 +92,13 @@ p {
 }
 
 .infoBlock {
-  /* outline: 1px solid rgb(62, 104, 243); */
+  outline: 1px solid rgb(62, 104, 243);
   overflow-y: auto;
   height: 55vh;
   padding-right: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   @media screen and (min-width: 768px) {
     padding-right: 16px;
   }
@@ -103,24 +126,11 @@ p {
   margin-bottom: 14px;
 }
 
-.formBlock {
-  margin-bottom: 24px;
-}
-
-.formBlock label {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.28571;
-  letter-spacing: -0.01em;
-  color: #2f2f2f;
-  position: relative;
+.genderBlock {
+  outline: 1px solid green;
   display: flex;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  font-size: 16px;
-  gap: 8px;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .radioBtns {
@@ -128,9 +138,16 @@ p {
   gap: 20px;
 }
 
+.radioBtns label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 .radioBtns input {
   position: absolute;
   opacity: 0;
+  outline: 1px solid red;
 }
 
 .customRadio {
@@ -162,11 +179,17 @@ p {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.formBlock {
+.nameBlock {
+  outline: 1px solid red;
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin-bottom: 24px;
+}
+
+.nameBlock .block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .formField {
@@ -197,9 +220,10 @@ p {
 }
 
 .normaBlock {
+  outline: 1px solid red;
   display: flex;
   flex-direction: column;
-  /* gap: 12px; */
+  gap: 14px;
 }
 
 .normaTitle {
@@ -213,7 +237,9 @@ p {
 }
 
 .formulaBlock {
-  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .formula {

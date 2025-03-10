@@ -8,8 +8,8 @@ const SettingModal = () => {
   const timeId = useId();
   return (
     <div className={css.modalBoby}>
-      <h2 className={css.title}>Setting</h2>
       <div className={css.avatarBlock}>
+        <h2 className={css.title}>Setting</h2>
         <div className={css.avatarWrapper}>
           <img src="../../../public/img/photo.jpeg" alt="avatar" />
         </div>
@@ -22,7 +22,7 @@ const SettingModal = () => {
       </div>
       <form className={css.infoBlock}>
         <div className={css.genderBlock}>
-          <p className={css.formTitle}>Your gender identity</p>
+          <p className={css.title}>Your gender identity</p>
           <div className={css.radioBtns}>
             <label>
               <input type="radio" name="gender" value="woman" />
@@ -36,25 +36,31 @@ const SettingModal = () => {
             </label>
           </div>
         </div>
-        <div className={css.formBlock}>
-          <div className={css.formField}>
-            <label htmlFor={nameId}> Your name</label>
+        <div className={css.nameBlock}>
+          <div className={css.block}>
+            <label htmlFor={nameId} className={css.title}>
+              Your name
+            </label>
             <input type="text" name="name" id={nameId} />
           </div>
-          <div className={css.formField}>
-            <label htmlFor={emailId}>Email</label>
+          <div className={css.block}>
+            <label htmlFor={emailId} className={css.title}>
+              Email
+            </label>
             <input type="email" name="mail" id={emailId} />
           </div>
         </div>
         <div className={css.normaBlock}>
-          <p className={css.formTitle}>My daily norma</p>
+          <p className={css.title}>My daily norma</p>
           <div className={css.formulaBlock}>
-            <p className={css.normaTitle}>For woman:</p>
-            <p className={css.formula}>V=(M*0,03) + (T*0,4)</p>
-          </div>
-          <div>
-            <p className={css.normaTitle}>For man:</p>
-            <p className={css.formula}>V=(M*0,04) + (T*0,6)</p>
+            <div className={css.formula}>
+              <p>For woman:</p>
+              <p className={css.formula}>V=(M*0,03) + (T*0,4)</p>
+            </div>
+            <div className={css.formula}>
+              <p>For man:</p>
+              <p className={css.formula}>V=(M*0,04) + (T*0,6)</p>
+            </div>
           </div>
           <div className={css.formulaInfo}>
             <p className={css.text}>
@@ -71,12 +77,12 @@ const SettingModal = () => {
             Active time in hours
           </p>
         </div>
-        <div className={css.formBlock}>
-          <div className={css.formField}>
+        <div>
+          <div>
             <label htmlFor={nameId}>Your weight in kilograms:</label>
             <input type="number" name="weight" id={weightId} />
           </div>
-          <div className={css.formField}>
+          <div>
             <label htmlFor={emailId}>
               The time of active participation in sports:
             </label>
@@ -85,7 +91,7 @@ const SettingModal = () => {
         </div>
         <p>The required amount of water in liters per day:</p>
         <p>1.8 L</p>
-        <div className={css.formField}>
+        <div>
           <label htmlFor={emailId}>
             Write down how much water you will drink:
           </label>
