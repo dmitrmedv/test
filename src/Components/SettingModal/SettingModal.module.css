@@ -9,24 +9,28 @@
   gap: 40px;
   overflow: hidden;
   padding: 40px 7px 40px 20px;
+  width: 80vw;
   box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
   @media screen and (min-width: 375px) {
-    width: 303px;
+    width: 343px;
   }
   @media screen and (min-width: 768px) {
     padding: 40px 16px 40px 40px;
-    width: 568px;
+    width: 648px;
+    font-size: 16px;
   }
   @media screen and (min-width: 1400px) {
-    width: 840px;
+    width: 920px;
   }
 }
 
 .modalBoby input {
   border: 1px solid rgba(47, 47, 47, 0.15);
   border-radius: 15px;
-  padding: 14px 16px 14px 16px;
-  /* width: 100%; */
+  padding: 14px;
+  @media screen and (min-width: 768px) {
+    padding: 16px;
+  }
 }
 
 p {
@@ -37,6 +41,9 @@ p {
 .avatarBlock .title {
   margin-bottom: 20px;
   font-size: 20px;
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+  }
 }
 
 .title {
@@ -47,21 +54,16 @@ p {
   color: #323f47;
 }
 
-.avatarBlock {
-  outline: 1px solid black;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* gap: 10px; */
-  /* margin-bottom: 40px; */
-}
-
 .avatarWrapper {
   margin: 0 auto 10px auto;
   width: 75px;
   height: 75px;
   border-radius: 50%;
   overflow: hidden;
+  @media screen and (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .avatarWrapper img {
@@ -89,18 +91,34 @@ p {
   border: none;
   cursor: pointer;
   padding: 0;
+  @media screen and (min-width: 768px) {
+    width: 151px;
+    height: 24px;
+    font-size: 16px;
+  }
+}
+
+.uploadBtn .icon {
+  width: 18px;
+  height: 18px;
+  @media screen and (min-width: 768px) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .infoBlock {
-  outline: 1px solid rgb(62, 104, 243);
+  /* outline: 1px solid rgb(62, 104, 243); */
   overflow-y: auto;
   height: 55vh;
   padding-right: 7px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1400px) {
     padding-right: 16px;
+    flex-wrap: wrap;
+    gap: 40px;
   }
 }
 
@@ -116,6 +134,22 @@ p {
   background-color: #f0eff4;
 }
 
+.leftBlock,
+.rightBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @media screen and (min-width: 1400px) {
+    width: 400px;
+  }
+}
+
+.rightBlock {
+  @media screen and (min-width: 1400px) {
+    margin-top: 78px;
+  }
+}
+
 .formTitle {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -127,7 +161,7 @@ p {
 }
 
 .genderBlock {
-  outline: 1px solid green;
+  /* outline: 1px solid green; */
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -139,6 +173,7 @@ p {
 }
 
 .radioBtns label {
+  cursor: pointer;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -147,7 +182,7 @@ p {
 .radioBtns input {
   position: absolute;
   opacity: 0;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 .customRadio {
@@ -179,14 +214,14 @@ p {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.nameBlock {
-  outline: 1px solid red;
+.inputBlock {
+  /* outline: 1px solid red; */
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-.nameBlock .block {
+.inputBlock .block {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -220,10 +255,18 @@ p {
 }
 
 .normaBlock {
-  outline: 1px solid red;
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+.normaBlock .icon {
+  height: 18px;
+  width: 18px;
+  @media screen and (min-width: 768px) {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 .normaTitle {
@@ -240,6 +283,16 @@ p {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 28px;
+  }
+}
+
+.formulaWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .formula {
@@ -252,20 +305,12 @@ p {
 }
 
 .formulaInfo {
+  color: rgba(47, 47, 47, 0.6);
   border: 1px solid rgba(47, 47, 47, 0.15);
   border-radius: 15px;
   padding: 16px;
-  margin-top: 14px;
-  margin-bottom: 14px;
-}
-
-.text {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.28571;
+  line-height: 1.5;
   letter-spacing: -0.01em;
-  color: rgba(47, 47, 47, 0.6);
 }
 
 .asterisk {
@@ -277,12 +322,38 @@ p {
   color: #9be1a0;
 }
 
-.mainText {
+.resultBlock {
   display: flex;
+  flex-direction: column;
+  gap: 5px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.result {
+  font-weight: 700;
+  line-height: 1.28571;
+  color: #9be1a0;
+}
+
+.saveBtn {
+  border: none;
+  border-radius: 30px;
+  padding: 14px 40px;
+  width: 116px;
+  height: 46px;
+  background: #9be1a0;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 700;
   line-height: 1.28571;
   letter-spacing: -0.01em;
-  color: #2f2f2f;
+  text-align: center;
+  color: #323f47;
+  cursor: pointer;
+  @media screen and (min-width: 768px) {
+    padding: 16px 50px;
+    width: 141px;
+    height: 56px;
+  }
 }
